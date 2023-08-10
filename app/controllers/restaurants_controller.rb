@@ -10,6 +10,7 @@ class RestaurantsController < ApplicationController
   def top
     # SELECT * FROM restaurants WHERE rating = 5
     @restaurants = Restaurant.where(rating: 5)
+    # render :index (if you want the layout to be the same as index page)
   end
 
   # GET /restaurants/1

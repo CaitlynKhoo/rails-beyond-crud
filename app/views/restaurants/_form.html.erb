@@ -5,11 +5,14 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
+    <%#= f.input :name, input_html: { class: 'text-light' 'min:0, min:5' } %>
     <%= f.input :address %>
-    <%= f.input :rating %>
+    <%= f.input :rating ,collection: [1,2,3,4,5]%>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
 <% end %>
+
+<%# simple form handles validation %>
